@@ -29,7 +29,7 @@ export class UsersService {
     });
   }
 
-  findOne(id: number) {
+  async findOne(id: number) {
     return this.prisma.user.findUnique({
       where: { id },
     });
